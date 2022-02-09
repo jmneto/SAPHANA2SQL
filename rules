@@ -1,0 +1,21 @@
+UNLOAD PRIORITY 5  AUTO MERGE#
+;#
+CS_FIXED#
+CS_INT#
+COLUMN#
+CS_FLOAT#
+CS_DAYDATE#
+CS_SECONDTIME#
+CS_DOUBLE#
+CS_LONGDATE#
+DOUBLE#FLOAT
+LONGDATE#DATETIME2(7)
+BLOB MEMORY THRESHOLD 1000#varbinary(max)
+CURRENTDATE#GetDate()
+NVARCHAR(5000)#NVARCHAR(MAX)
+ROW#
+CS_STRING#
+NCLOB MEMORY THRESHOLD 1000#varbinary(max)
+STRING#
+%COMMENT ON TABLE "{0}"."{1}" is '{2}'#EXEC sys.sp_addextendedproperty @name=N'{1}',@value=N'{2}',@level0type=N'SCHEMA',@level0name=N'{0}',@level1type=N'TABLE',@level1name=N'{1}'
+%COMMENT ON  "{0}"."{1}"."{2}" is '{3}'#EXEC sys.sp_addextendedproperty @name=N'{2}',@value=N'{3}',@level0type=N'SCHEMA',@level0name=N'{0}',@level1type=N'TABLE',@level1name=N'{1}',@level2type=N'COLUMN',@level2name=N'{2}'
