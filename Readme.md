@@ -8,13 +8,13 @@ The "rules file" contains the rules, one rule per line, the text to be replaced 
 
 Although the rules in this example apply to SAP HANA to SQL Server syntax translation, these rules can be modified to make any required syntax translation independent of the source or target database server.
 
-## Regular text replacement Rule:
+## Regular text replacement rule:
 
 ```
 text to replace#new text
 ```
 
-## Text Replacement plus parameter transposition:
+## Text replacement plus parameter transposition:
 To transpose parameters, use the syntax {0}. In the example below, {0} and {1} are the parameters to be transposed from the original text to the new replacement text. 
 
 In this example if the original script file contains: Text to Replace "parameter1" "parameter2", it wwill be translated to: new text "parameter2" "parameter1".
@@ -27,7 +27,7 @@ Text to replace "{0}" "{1}"#new text "{1}" "{0}"
 
 You can add your own rules as required for your scenario. 
 
-## Sample Rules File
+## Sample rules file
 
 ```
 UNLOAD PRIORITY 5  AUTO MERGE#
